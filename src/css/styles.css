@@ -24,10 +24,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: #2E2F42;
-  padding-left: 40px;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
+  padding: 40px;
   background-color: transparent;
 }
 
@@ -35,13 +32,14 @@ body {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: row-reverse;
-  width: max-width;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 /* main content */
 
 .main-content {
+  max-width: 1070px;
   padding-right: 40px;
   padding-bottom: 40px;
   box-sizing: border-box;
@@ -49,7 +47,7 @@ body {
 
 .section-title {
   color: #161D2A;
-  font-size: clamp(22px, 24px);
+  font-size: clamp(20px, 3vw, 24px);
   font-weight: 700;
   line-height: normal;
   margin-top: 0;
@@ -62,7 +60,7 @@ body {
   background: #E0EBFE;
   padding-bottom: 40px;
   box-sizing: border-box;
-  width: 370px;
+  max-width: 370px;
 }
 
 .my-photo {
@@ -90,15 +88,12 @@ body {
   font-weight: 400;
   line-height: 24px;
   text-decoration-line: underline;
+  word-wrap: break-word;
 }
 
 .contacts-item {
   margin-top: 0;
   margin-bottom: 4px;
-}
-
-.contacts-container {
-  margin-bottom: 40px;
 }
 
 /* ------Skills------- */
@@ -127,7 +122,7 @@ body {
 
 .my-name {
   color: #FFFFFF;
-  font-size: 3vw;
+  font-size: clamp(26px, 5vw, 36px);
   font-weight: 700;
   line-height: 1.5em;
   margin-top: 0;
@@ -136,15 +131,15 @@ body {
 
 .my-profession {
   color: #FFFFFF;
-  font-size: 2vw;
+  font-size: clamp(22px, 4vw, 28px);
   font-weight: 700;
-  line-height: 17px;
+  line-height: 1.5em;
   margin-top: 0;
 }
 
 .my-descr {
   color: #FFFFFF;
-  font-size: clamp(14px 16px);
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 500;
   line-height: 1.5em;
   margin-top: 50px;
@@ -168,7 +163,7 @@ body {
 
 .my-project-item-link {
   color: #005FFF;
-  font-size: 12px;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 400;
   line-height: 1.5em;
   text-decoration-line: underline;
@@ -176,9 +171,9 @@ body {
 
 .my-project-item-tech {
   color: #595959;
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5em;
 }
 
 .my-project-container {
@@ -189,9 +184,9 @@ body {
 
 .work-experience-company {
   color: #000;
-  font-size: clamp(14px 16px);
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 12px;
 }
@@ -202,9 +197,9 @@ body {
 
 .work-experience-period {
   color: #A8A8A8;
-  font-size: 12px;
+  font-size: clamp(12px, 1vw, 14px);
   font-weight: 400;
-  line-height: 15px;
+  line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -221,9 +216,9 @@ body {
 
 .work-experience-duties-item {
   color: #595959;
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5em;
 }
 
 .work-experience-container {
@@ -232,7 +227,7 @@ body {
 
 .my-education-place {
   color: #6D9BF5;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 700;
   line-height: normal;
   margin-top: 0;
@@ -241,7 +236,7 @@ body {
 
 my-education-profession {
   color: #000;
-  font-size: clamp(14px 16px);
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 700;
   line-height: normal;
   margin-top: 0;
@@ -250,7 +245,7 @@ my-education-profession {
 
 .my-education-period {
   color: #A8A8A8;
-  font-size: 12px;
+  font-size: clamp(12px, 1vw, 14px);
   font-weight: 400;
   line-height: normal;
   margin-top: 0;
@@ -258,7 +253,7 @@ my-education-profession {
 
 .my-education-period-separator {
   color: #000;
-  font-size: clamp(12px 14px);
+  font-size: clamp(12px, 1vw, 14px);
   font-weight: 400;
   line-height: normal;
 }
@@ -276,22 +271,24 @@ my-education-profession {
     padding: 20px;
   }
 
-  .main-content {
-    padding: 40px;
-  }
 }
 
 @media screen and (max-width: 800px) {
   .my-photo {
-    width: 250px;
+    max-width: 250px;
   }
 
   .sidebar {
-    width: 250px;
+    max-width: 250px;
   }
 
   .sidebar-content {
     padding: 20px;
+  }
+
+  .my-info,
+  .main-section {
+    padding-left: 20px;
   }
 }
 
@@ -301,20 +298,13 @@ my-education-profession {
   }
 
   .my-photo {
-    width: 200px;
+    max-width: 200px;
   }
 
   .sidebar {
-    width: 200px;
+    max-width: 200px;
   }
 
-  .main-content {
-    padding: 20px;
-  }
-
-  .my-name {
-    font-size: 28px;
-  }
 }
 
 @media screen and (max-width: 510px) {
@@ -323,10 +313,10 @@ my-education-profession {
   }
 
   .my-photo {
-    width: 100%;
+    max-width: 100%;
   }
 
   .sidebar {
-    width: 100%;
+    max-width: 100%;
   }
 }
